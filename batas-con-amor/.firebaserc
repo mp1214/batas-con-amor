@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "batas-white": {
+      "hosting": {
+        "batas-con-amor": [
+          "batas-white"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "batas-white"
+  }
+}

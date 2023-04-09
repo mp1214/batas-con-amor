@@ -1,0 +1,15 @@
+.footer{
+    margin-top: 1vh;
+    width: 100%;
+    margin-bottom: 1vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background: linear-gradient(450deg,rgb(226, 184, 232,0.5),rgb(248, 246, 246,0.5));
+  
+    box-shadow: 0,20px,30px rgb(206, 116, 226);
+    color: rgb(9, 5, 5);
+    text-align: center;
+    margin: 1vh 0;
+    font-size: 16.1px;
+    }
+  

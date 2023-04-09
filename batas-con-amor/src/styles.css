@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    font-size: 12px;
+}
+body{
+    font-family: Montserrat;
+}
+video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.4;
+    z-index: -1;
+  
+   position: fixed;
+  }
+  
+
+ 

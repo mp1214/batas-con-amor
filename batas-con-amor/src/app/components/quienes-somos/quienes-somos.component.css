@@ -1,0 +1,33 @@
+.quienes-somos{
+
+    text-align: justify;
+    padding: 22px;
+    margin: 5px;
+    font-size: 1.9rem;
+    font-family:Montserrat;
+   background-color: rgba(244, 241, 246, 0.745);
+    color:  #292929;
+    font-weight:500;
+       }
+   
+    @media (max-width: 1400px) {
+        p {
+          font-size: 25px;
+        }
+      }
+      
+    
+      
+      @media (max-width: 768px) {
+        p {
+          font-size: 18px;
+        }
+      }
+      
+    
+      
+      @media (max-width: 450px) {
+        p {
+          font-size: 12px;
+        }
+      }

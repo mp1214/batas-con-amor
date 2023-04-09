@@ -1,0 +1,146 @@
+
+body{
+  background: #303030;
+}
+.contenedor {
+	-webkit-perspective: 500px;
+	perspective: 500px;
+	perspective-origin: 50% 50%;
+}
+
+.cubo, .cubo .cara, .cubo .cara-fondo {
+	height: 290px;
+	width: 290px;
+}
+
+.cubo {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-transform: rotateX(0deg) rotateY(-30deg);
+	transform: rotateX( 0deg ) rotateY( -30deg );
+	margin: 150px auto;
+
+	-webkit-animation: giro 20s infinite linear;
+	animation: giro 20s infinite linear;
+}
+
+.cubo .cara {
+	position: absolute;
+	border: 5px solid #000;
+	border-radius: 25px;
+}
+
+.cubo .cara img {
+	border-radius: 25px;
+}
+
+.cubo .cara-fondo{
+	background: #000;
+	position: absolute;
+	border: 5px solid #000;
+	border-radius: 19px;
+
+}
+
+/*Cara frontal*/
+.cubo .cara:nth-child(1) {
+	-webkit-transform: translateZ(150px);
+	transform: translateZ(150px);
+}
+/*Cara posterior*/
+.cubo .cara:nth-child(2) {
+	-webkit-transform: rotateY(180deg) translateZ(150px);
+	transform: rotateY(180deg) translateZ(150px);
+}
+/*Cara izquierda*/
+.cubo .cara:nth-child(3) {
+	-webkit-transform: rotateY(-90deg) translateZ(150px);
+	transform: rotateY(-90deg) translateZ(150px);
+}
+/*Cara derecha*/
+.cubo .cara:nth-child(4) {
+	-webkit-transform: rotateY(90deg) translateZ(150px);
+	transform: rotateY(90deg) translateZ(150px);
+}
+/*Cara superior*/
+.cubo .cara:nth-child(5) {
+	-webkit-transform: rotateX(90deg) translateZ(150px);
+	transform: rotateX(90deg) translateZ(150px);
+}
+/*Cara inferior*/
+.cubo .cara:nth-child(6) {
+	-webkit-transform: rotateX(-90deg) translateZ(150px);
+	transform: rotateX(-90deg) translateZ(150px);
+}
+
+
+/************Caras posteriores*************/
+/*Cara frontal*/
+.cubo .cara-fondo:nth-child(7) {
+	-webkit-transform: translateZ(149px);
+	transform: translateZ(149px);
+}
+/*Cara posterior*/
+.cubo .cara-fondo:nth-child(8) {
+	-webkit-transform: rotateY(180deg) translateZ(149px);
+	transform: rotateY(180deg) translateZ(149px);
+}
+/*Cara izquierda*/
+.cubo .cara-fondo:nth-child(9) {
+	-webkit-transform: rotateY(-90deg) translateZ(149px);
+	transform: rotateY(-90deg) translateZ(149px);
+}
+/*Cara derecha*/
+.cubo .cara-fondo:nth-child(10) {
+	-webkit-transform: rotateY(90deg) translateZ(149px);
+	transform: rotateY(90deg) translateZ(149px);
+}
+/*Cara superior*/
+.cubo .cara-fondo:nth-child(11) {
+	-webkit-transform: rotateX(90deg) translateZ(149px);
+	transform: rotateX(90deg) translateZ(149px);
+}
+/*Cara inferior*/
+.cubo .cara-fondo:nth-child(12) {
+	-webkit-transform: rotateX(-90deg) translateZ(149px);
+	transform: rotateX(-90deg) translateZ(149px);
+}
+
+/*Caras interiores para formar una cruz en el centro*/
+.cubo .cara-fondo:nth-child(13) {
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+.cubo .cara-fondo:nth-child(14) {
+	-webkit-transform: rotateY(90deg);
+	transform: rotateY(90deg);
+}
+
+.cubo .cara-fondo:nth-child(15) {
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+}
+
+@-webkit-keyframes giro {
+    0% { -webkit-transform: rotateX(-45deg) rotateY(0deg); }
+    50% { -webkit-transform: rotateX(45deg) rotateY(360deg); }
+    100% { -webkit-transform: rotateX(-45deg) rotateY(720deg); }
+}
+
+@keyframes giro {
+    0% { transform: rotateX(-45deg) rotateY(0deg); }
+    50% { transform: rotateX(45deg) rotateY(360deg); }
+    100% { transform: rotateX(-45deg) rotateY(720deg); }
+}
+
+@-webkit-keyframes giro360 {
+    0% { -webkit-transform: rotateX(  0deg) rotateY(  0deg); }
+  100% { -webkit-transform: rotateX(360deg) rotateY(360deg); }
+}
+
+@keyframes giro360 {
+    0% { transform: rotateX(  0deg) rotateY(  0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}

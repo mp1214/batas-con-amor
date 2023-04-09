@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <h1>Nuestros Productos</h1>
+    <br>
+    <section class="producto"> 
+        <div class="producto_linea">
+            <div class="producto__linea__principal">
+            <p class="producto__linea__titulo"></p> 
+            <a href="#" class="producto__linea__enlace"></a>
+            </div>
+            <ul  class="producto_linea_starWars" >
+            <ul *ngFor="let producto of productos" style="list-style: none;" >
+                    <li class="producto_linea_starWars__lista"><img [src]="producto.imagen" alt="producto.imagen"> 
+                       <br><br>
+                        <p class="producto_linea__lista__titulo">{{producto.descripcion}}</p>
+                        <p class="producto_linea__precio">Precio: {{producto.precio}}</p>
+                        <a class="producto_linea_starWars__lista__ver"(click)="evento(producto.id)" data-bs-toggle="modal" data-bs-target="#exampleModal" href="">Ver Producto</a>
+                    </li>
+            </ul>
+        </ul>
+            
+    </div>
+    
+</section> 
+</div>
+<div class="col-1"></div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalle Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ul *ngFor="let producto of productos" style="list-style: none;" >
+                <div *ngIf="id ==producto.id "> 
+                <li class="producto_linea_starWars__lista justify-content-center"><img [src]="producto.imagen" alt="producto.imagen"> 
+                    <p class="producto_linea__lista__titulo">Descripción: {{producto.descripcion}}</p>
+                    <p class="producto_linea__precio">Precio: {{producto.precio}}</p>
+                    </li>
+                </div>
+               
+        </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
